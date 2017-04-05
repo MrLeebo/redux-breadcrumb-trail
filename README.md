@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/MrLeebo/redux-breadcrumb-trail.svg?branch=master)](https://travis-ci.org/MrLeebo/redux-breadcrumb-trail)
+
 # redux-breadcrumb-trail
 
 This is a Breadcrumb component for react, redux, and react-router v3 that supports a stack-based trail that follows your actual navigation through the application. Ordinarily breadcrumb components work by tracing your static `<Routes>` layout.
