@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/MrLeebo/redux-breadcrumb-trail.svg?branch=master)](https://travis-ci.org/MrLeebo/redux-breadcrumb-trail)
+[![Build Status](https://travis-ci.org/MrLeebo/redux-breadcrumb-trail.svg?branch=master)](https://travis-ci.org/MrLeebo/redux-breadcrumb-trail) [![dependencies Status](https://david-dm.org/MrLeebo/redux-breadcrumb-trail/status.svg)](https://david-dm.org/MrLeebo/redux-supermodel) [![devDependencies Status](https://david-dm.org/MrLeebo/redux-breadcrumb-trail/dev-status.svg)](https://david-dm.org/MrLeebo/redux-supermodel?type=dev)
 
 # redux-breadcrumb-trail
 
