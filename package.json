@@ -1,6 +1,6 @@
 {
   "name": "redux-breadcrumb-trail",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A react component for rendering a Breadcrumb that follows your trail through the application",
   "repository": "https://github.com/MrLeebo/redux-breadcrumb-trail",
   "main": "dist/index.js",
