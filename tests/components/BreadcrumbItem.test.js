@@ -2,6 +2,7 @@
 import assert from 'assert'
 import React from 'react'
 import { mount } from 'enzyme'
+import { stub } from 'sinon'
 import BreadcrumbItem from '../../lib/components/BreadcrumbItem'
 
 describe('BreadcrumbItem', () => {
@@ -31,5 +32,12 @@ describe('BreadcrumbItem', () => {
     const result = $subject({ itemRenderer: props => <span>{props.children}</span>, component: () => <i>About</i>, current: false })
 
     assert.equal(result.find('span a i').text(), 'About')
+  })
+
+  it('should pass current prop to breadcrumb function', () => {
+    const component = stub().returns(null)
+    $subject({ component, current: true })
+
+    assert.equal(component.firstCall.args[0].current, true)
   })
 })
