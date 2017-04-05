@@ -2,7 +2,9 @@
 
 # redux-breadcrumb-trail
 
-This is a Breadcrumb component for react, redux, and react-router v3 that supports a stack-based trail that follows your actual navigation through the application. Ordinarily breadcrumb components work by tracing your static `<Routes>` layout.
+> This is a Breadcrumb component for react, redux, and react-router v3 that supports a stack-based trail that follows your actual navigation through the application. Ordinarily breadcrumb components work by tracing your static `<Routes>` layout. If your app contains a lot of side-navigation between un-nested pages, a dynamic stack-based breadcrumb can be useful to you.
+
+[Check out the DEMO!](https://mrleebo.github.io/redux-breadcrumb-trail)
 
 This is how it works:
 

@@ -11,6 +11,11 @@ export default function App (props) {
         <ul className='list-inline'>
           <li><NavLink to='/products'>Products</NavLink></li>
           <li><NavLink to='/locations'>Locations</NavLink></li>
+          <li className="pull-right">
+            <a className="btn btn-default" href="https://github.com/MrLeebo/redux-breadcrumb-trail" target="_blank">
+              <i className="fa fa-github" />
+            </a>
+          </li>
         </ul>
       </div>
       <div className='container'>
