@@ -92,5 +92,15 @@ describe('push', () => {
       const action = pushActionCreator({ routes, location: { state: { breadcrumb: 'reset' } } })
       assert.equal($subject(action).length, 2)
     })
+
+    it('should replace', () => {
+      const routes = [
+        { breadcrumb: 'Home', path: '/' },
+        { breadcrumb: 'Posts', path: '/posts' }
+      ]
+
+      const action = pushActionCreator({ routes, params: { different: true }, location: { action: 'REPLACE' } })
+      assert.equal($subject(action).length, 2)
+    })
   })
 })
