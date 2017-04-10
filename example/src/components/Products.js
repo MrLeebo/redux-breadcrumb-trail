@@ -23,7 +23,7 @@ export class Products extends Component {
       <div>
         <h2>Products</h2>
         <ul className='list-inline'>
-          {fetch.current.map(({id, name}) => <li key={id}><Link to={`/products/${id}`}>{name}</Link></li>)}
+          {fetch.current.map(({id, name}) => <li key={id}><Link to={`/products/${id}/summary`}>{name}</Link></li>)}
         </ul>
       </div>
     )

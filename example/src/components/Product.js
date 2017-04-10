@@ -49,7 +49,7 @@ export class Product extends Component {
         {+params.id !== 4 &&
           <div>
             <h4>You might also like...</h4>
-            <Link to='/products/4'>Chocolate Lemonade</Link>
+            <Link to='/products/4/summary'>Chocolate Lemonade</Link>
           </div>
         }
       </div>

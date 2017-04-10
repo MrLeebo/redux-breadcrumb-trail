@@ -44,9 +44,9 @@ export class Location extends Component {
             </tr>
           </thead>
           <tbody>
-            <tr><td><Link to='/products/1'>Lemonade</Link></td></tr>
-            <tr><td><Link to='/products/2'>Raspberry-ade</Link></td></tr>
-            <tr><td><Link to='/products/3'>Strawberry Lemonade</Link></td></tr>
+            <tr><td><Link to='/products/1/summary'>Lemonade</Link></td></tr>
+            <tr><td><Link to='/products/2/summary'>Raspberry-ade</Link></td></tr>
+            <tr><td><Link to='/products/3/summary'>Strawberry Lemonade</Link></td></tr>
           </tbody>
         </table>
       </div>
