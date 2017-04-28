@@ -1,6 +1,6 @@
 {
   "name": "redux-breadcrumb-trail",
-  "version": "0.1.5",
+  "version": "0.2.0",
   "description": "A react component for rendering a Breadcrumb that follows your trail through the application",
   "repository": "https://github.com/MrLeebo/redux-breadcrumb-trail",
   "main": "dist/index.js",
@@ -21,7 +21,7 @@
   "license": "ISC",
   "peerDependencies": {
     "react-redux": "^5.0.3",
-    "react-router": "^3.0.2",
+    "react-router": "^3.0.5",
     "redux": "^3.6.0"
   },
   "devDependencies": {
@@ -30,20 +30,21 @@
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
     "bdd-lazy-var": "^1.2.1",
-    "enzyme": "^2.8.0",
-    "jsdom": "^9.12.0",
-    "mocha": "^3.2.0",
+    "enzyme": "^2.8.2",
+    "jsdom": "^10.0.0",
+    "mocha": "^3.3.0",
     "nyc": "^10.2.0",
-    "react": "~15.4.2",
-    "react-addons-test-utils": "~15.4.2",
-    "react-dom": "~15.4.2",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
     "react-redux": "^5.0.3",
-    "react-router": "3.0.3",
+    "react-router": "^3.0.5",
+    "react-test-renderer": "^15.5.4",
     "redux": "^3.6.0",
     "sinon": "^2.1.0"
   },
   "dependencies": {
-    "lodash": "^4.17.4"
+    "lodash": "^4.17.4",
+    "prop-types": "^15.5.8"
   },
   "standard": {
     "globals": [

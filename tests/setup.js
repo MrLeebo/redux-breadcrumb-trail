@@ -1,4 +1,4 @@
-import jsdom from 'jsdom'
+import jsdom from 'jsdom/lib/old-api.js'
 
 /* eslint-disable no-undef */
 global.document = jsdom.jsdom('<!doctype html><html><body></body></html>')
