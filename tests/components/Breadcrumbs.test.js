@@ -5,11 +5,8 @@ import { mount } from 'enzyme'
 import { spy } from 'sinon'
 import { Breadcrumbs, separatorRenderer, mapStateToProps } from '../../lib/components/Breadcrumbs'
 
-describe('BreadcrumbItem', () => {
-  subject(() => props => {
-    const component = <Breadcrumbs breadcrumb={$breadcrumb} dispatch={$dispatch} {...props} />
-    return mount(component, { lifecycleExperimental: true })
-  })
+describe('Breadcrumbs', () => {
+  subject(() => props => mount(<Breadcrumbs breadcrumb={$breadcrumb} dispatch={$dispatch} {...props} />))
 
   def('breadcrumb', () => ({ breadcrumbs: [] }))
   def('dispatch', spy)
