@@ -14,6 +14,9 @@ import Location from './Location'
 import LocationBreadcrumb from './LocationBreadcrumb'
 import Locations from './Locations'
 
+import Friends from './Friends'
+import FriendsBreadcrumb from './FriendsBreadcrumb'
+
 export default function Routes () {
   return (
     <Router history={hashHistory}>
@@ -29,6 +32,8 @@ export default function Routes () {
 
         <Route path='locations' component={Locations} breadcrumb='Locations' />
         <Route path='locations/:id' component={Location} breadcrumb={LocationBreadcrumb} />
+
+        <Route path='friends/:id' component={Friends} breadcrumb={FriendsBreadcrumb} />
       </Route>
     </Router>
   )
