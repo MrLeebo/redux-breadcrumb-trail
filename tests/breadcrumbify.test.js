@@ -32,6 +32,11 @@ describe('breadcrumbify', () => {
     })
   })
 
+  it('should change with active query string', () => {
+    $subject.setProps({ title: 'qs', location: { pathname: '/posts', search: '?sort=asc' }, url: '/posts?sort=asc' })
+    assertText('qs')
+  })
+
   describe('display name', () => {
     function assertDisplayName (expected) {
       assert.equal($subject.name(), expected)
