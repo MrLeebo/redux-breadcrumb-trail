@@ -102,5 +102,26 @@ describe('push', () => {
       const action = pushActionCreator({ routes, params: { different: true }, location: { action: 'REPLACE' } })
       assert.equal($subject(action).length, 2)
     })
+
+    it('should pop with ignored params', () => {
+      const routes = [
+        { breadcrumb: 'Home', path: '/' },
+        { breadcrumb: 'Posts', path: '/posts', ignoreParams: true }
+      ]
+
+      const action = pushActionCreator({ routes, params: { different: true } })
+      assert.equal($subject(action).length, 2)
+    })
+
+    it('should use parent', () => {
+      const routes = [
+        { breadcrumb: 'Home', path: '/' },
+        { breadcrumb: 'Posts', path: '/posts' },
+        { useParentBreadcrumb: true, path: ':tab' }
+      ]
+
+      const action = pushActionCreator({ routes })
+      assert.equal($subject(action).length, 2)
+    })
   })
 })

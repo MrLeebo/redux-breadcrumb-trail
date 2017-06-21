@@ -7,6 +7,10 @@ describe('reducer', () => {
     assert.equal(reducer(initialState, {}), initialState)
   })
 
+  it('should populate initial state', () => {
+    assert.equal(reducer(undefined, {}), initialState)
+  })
+
   describe('push', () => {
     it('should change state', () => {
       const action = actionCreators.push({ routes: [{}] })
