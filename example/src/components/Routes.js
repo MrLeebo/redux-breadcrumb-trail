@@ -1,6 +1,8 @@
 import React from 'react'
 import { Router, Route, IndexRoute, IndexRedirect, hashHistory } from 'react-router'
 
+import { componentCache } from '../../../dist'
+
 import App from './App'
 import Home from './Home'
 
@@ -18,22 +20,26 @@ import Friends from './Friends'
 import FriendsBreadcrumb from './FriendsBreadcrumb'
 
 export default function Routes () {
+  componentCache.set('product', ProductBreadcrumb)
+  componentCache.set('location', LocationBreadcrumb)
+  componentCache.set('friend', FriendsBreadcrumb)
+
   return (
     <Router history={hashHistory}>
       <Route path='/' component={App}>
         <IndexRoute component={Home} breadcrumb={<i className='fa fa-home' />} />
 
         <Route path='products' component={Products} breadcrumb='Products' />
-        <Route path='products/:id' component={Product} breadcrumb={ProductBreadcrumb}>
+        <Route path='products/:id' component={Product} breadcrumb={{ componentCacheKey: 'product' }}>
           <IndexRedirect to='summary' />
           <Route path='summary' component={SummaryTab} useParentBreadcrumb />
           <Route path='detail' component={DetailTab} useParentBreadcrumb />
         </Route>
 
         <Route path='locations' component={Locations} breadcrumb='Locations' />
-        <Route path='locations/:id' component={Location} breadcrumb={LocationBreadcrumb} />
+        <Route path='locations/:id' component={Location} breadcrumb={{ componentCacheKey: 'location' }} />
 
-        <Route path='friends/:id' component={Friends} breadcrumb={FriendsBreadcrumb} />
+        <Route path='friends/:id' component={Friends} breadcrumb={{ componentCacheKey: 'friend' }} />
       </Route>
     </Router>
   )

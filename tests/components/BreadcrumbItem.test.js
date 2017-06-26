@@ -3,6 +3,8 @@ import assert from 'assert'
 import React from 'react'
 import { mount } from 'enzyme'
 import { stub } from 'sinon'
+
+import componentCache from '../../lib/componentCache'
 import BreadcrumbItem from '../../lib/components/BreadcrumbItem'
 
 describe('BreadcrumbItem', () => {
@@ -39,5 +41,13 @@ describe('BreadcrumbItem', () => {
     $subject({ component, current: true })
 
     assert.equal(component.firstCall.args[0].current, true)
+  })
+
+  it('should allow component cache entry', () => {
+    const component = stub().returns(null)
+    componentCache.set('test', component)
+    $subject({ component: { componentCacheKey: 'test' }, current: true })
+
+    assert(component.calledOnce)
   })
 })

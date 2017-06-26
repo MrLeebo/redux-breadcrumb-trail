@@ -74,7 +74,7 @@ In your `<Router>`, there are a number of new options for `<Route>` components:
 
 | prop | type | description |
 :---|:---|:---
-| breadcrumb |any valid React node, or a function | The label that appears in the breadcrumb component when the route is part of it. All of your routes should contain either "breadcrumb" or "useParentBreadcrumb" |
+| breadcrumb |any valid React node, [component cache entry](docs/ComponentCache.md), or a function | The label that appears in the breadcrumb component when the route is part of it. All of your routes should contain either "breadcrumb" or "useParentBreadcrumb" |
 | breadcrumbKey |string |Routes that share a breadcrumbKey will automatically "pop back" on each other. Defaults to "path" |
 | useParentBreadcrumb |bool |This route is kept out of the breadcrumb and its parent is updated instead. Useful for tabbed interfaces or other nested route structures where you don't want the child routes to be part of the breadcrumb |
 | ignoreParams |bool |Ignores params when matching the route to previous breadcrumbs. With this prop set to `true`, "//products//:id" would consider "//products//1" and "//products//2" to be a match. Defaults to `false` |
