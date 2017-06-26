@@ -56,6 +56,16 @@ export default function App (props) {
 }
 ```
 
+The `<Breadcrumbs />` component supports the following props:
+
+| prop | type | description |
+:---|:---|:---
+| itemRenderer | function or react node | The container for each breadcrumb item. Default is `'li'` |
+| listRenderer | function or react node | The container for the breadcrumb control. Default is `'ul'` |
+| separatorRenderer | function or react node | The element to render in between each breadcrumb item. Default is `() => <li>&gt;</li>` |
+
+Use the Renderer props to define a custom breadcrumb component that fits with your application's style.
+
 ##### store.js
 
 Add the reducer to your redux store:
