@@ -27,5 +27,13 @@ describe('reducer', () => {
 
       assert.equal(result, initialState)
     })
+
+    it('should reset to arbitrary state', () => {
+      const state = { breadcrumbs: [{}] }
+      const action = actionCreators.reset(state)
+      const result = reducer({}, action)
+
+      assert.equal(result, state)
+    })
   })
 })

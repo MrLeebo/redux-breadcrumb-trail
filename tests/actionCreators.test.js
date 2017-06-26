@@ -16,7 +16,12 @@ describe('actionCreators', () => {
 
   describe('reset', () => {
     it('should have type', () => {
-      assert.deepEqual(actionCreators.reset(), { type: types.RESET })
+      assert.deepEqual(actionCreators.reset(), { type: types.RESET, payload: undefined })
+    })
+
+    it('should have type and payload', () => {
+      const payload = { breadcrumbs: [{}] }
+      assert.deepEqual(actionCreators.reset(payload), { type: types.RESET, payload })
     })
   })
 })

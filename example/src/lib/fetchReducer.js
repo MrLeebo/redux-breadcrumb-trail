@@ -1,4 +1,4 @@
-import * as types from './fetchActionTypes'
+import * as types from './actionTypes'
 
 const initialState = { current: null }
 

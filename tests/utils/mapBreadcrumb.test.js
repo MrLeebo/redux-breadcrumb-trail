@@ -64,12 +64,12 @@ describe('mapBreadcrumb', () => {
     assert.equal('/key', breadcrumbKey)
   })
 
-  it("should map search", () => {
+  it('should map search', () => {
     const { url } = mapBreadcrumb({}, { pathname: 'pathname', search: '?search=' })
     assert.equal('pathname?search=', url)
   })
 
-  it("should map search", () => {
+  it('should map search', () => {
     const { url } = mapBreadcrumb({ url: '/url' })
     assert.equal('/url', url)
   })

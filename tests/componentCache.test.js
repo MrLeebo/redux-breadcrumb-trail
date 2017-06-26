@@ -15,7 +15,7 @@ describe('componentCache', () => {
   })
 
   it('should not allow function key', () => {
-    assert.throws(() => componentCache.set(function() {}), /^Error: Key must be a primitive:/)
+    assert.throws(() => componentCache.set(function () {}), /^Error: Key must be a primitive:/)
   })
 
   it('should not allow object key', () => {

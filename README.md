@@ -135,6 +135,14 @@ export default connect(mapStateToProps)(breadcrumbify(LocationBreadcrumb))
 
 `breadcrumbify` is a higher-order component that renders like normal while the breadcrumb is active and then "freezes" the props when the breadcrumb becomes inactive. It does so by caching the component's props into the component state.
 
+##### Action Creators
+
+**redux-breadcrumb-trail** exports its action creators, giving you direct access to its redux state. This way you can build your own custom breadcrumb controls on top.
+
+| actionCreator | description |
+| push({location, params, routes}) | Pushes a new breadcrumb onto the stack. The props should be the corresponding `react-router` props for the route you want to push. |
+| reset({breadcrumbs}) | Reset the breadcrumbs to a defined state. The safest way to use this is probably to copy the existing redux state and mutate it to suit your needs. |
+
 #### Similar Projects
 
 - [react-breadcrumbs](https://github.com/svenanders/react-breadcrumbs)

@@ -1,4 +1,4 @@
-import * as types from './fetchActionTypes'
+import * as types from './actionTypes'
 
 const products = [
   { id: 1, name: 'Lemonade', price: '0.05', description: 'A classic and refreshing drink' },
