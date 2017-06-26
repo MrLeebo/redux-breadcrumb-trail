@@ -140,6 +140,7 @@ export default connect(mapStateToProps)(breadcrumbify(LocationBreadcrumb))
 **redux-breadcrumb-trail** exports its action creators, giving you direct access to its redux state. This way you can build your own custom breadcrumb controls on top.
 
 | actionCreator | description |
+:---|:---|
 | push({location, params, routes}) | Pushes a new breadcrumb onto the stack. The props should be the corresponding `react-router` props for the route you want to push. |
 | reset({breadcrumbs}) | Reset the breadcrumbs to a defined state. The safest way to use this is probably to copy the existing redux state and mutate it to suit your needs. |
 
