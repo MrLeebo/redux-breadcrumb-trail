@@ -3,7 +3,7 @@ import { createLogger } from 'redux-logger'
 
 import fetch from './fetchReducer'
 import state from './stateReducer'
-import breadcrumb from '../../../dist/reducer'
+import { reducer as breadcrumb } from 'redux-breadcrumb-trail'
 
 const loggerMiddleware = createLogger({ collapsed: true })
 const rootReducer = combineReducers({ breadcrumb, fetch, state })

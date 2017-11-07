@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router'
+import { connect } from 'react-redux'
 
-import fetched from './fetched'
 import { fetchLocation, reset } from '../lib/fetchActionCreators'
 
 export class Location extends Component {
@@ -22,13 +22,12 @@ export class Location extends Component {
   }
 
   render () {
-    const {fetch, params} = this.props
-    if (!fetch.current) return <div>Loading...</div>
+    const { place, params } = this.props
+    if (!place) return <div>Loading...</div>
 
-    const { name } = fetch.current
     return (
       <div>
-        <h2>{name}</h2>
+        <h2>{place.name}</h2>
 
         {+params.id !== 1 &&
           <div>
@@ -54,4 +53,5 @@ export class Location extends Component {
   }
 }
 
-export default fetched(Location)
+export const mapProps = ({fetch}) => ({ place: fetch.place })
+export default connect(mapProps)(Location)

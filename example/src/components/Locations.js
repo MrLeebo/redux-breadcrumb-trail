@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router'
+import { connect } from 'react-redux'
 
-import fetched from './fetched'
 import { fetchLocations, reset } from '../lib/fetchActionCreators'
 
 export class Locations extends Component {
@@ -14,8 +14,8 @@ export class Locations extends Component {
   }
 
   render () {
-    const {fetch} = this.props
-    if (!fetch.current) {
+    const { places } = this.props
+    if (!places) {
       return <h2>Loading...</h2>
     }
 
@@ -23,11 +23,11 @@ export class Locations extends Component {
       <div>
         <h2>Locations</h2>
         <ul className='list-inline'>
-          {fetch.current.map(({id, name}) => <li key={id}><Link to={`/locations/${id}`}>{name}</Link></li>)}
+          {places.map(({id, name}) => <li key={id}><Link to={`/locations/${id}`}>{name}</Link></li>)}
         </ul>
       </div>
     )
   }
 }
 
-export default fetched(Locations)
+export default connect(({fetch}) => ({ places: fetch.places }))(Locations)

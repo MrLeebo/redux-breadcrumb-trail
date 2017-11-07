@@ -1,6 +1,6 @@
 import * as types from './actionTypes'
 
-const initialState = { current: null }
+const initialState = { product: null, products: null, place: null, places: null }
 
 export default function fetchReducer (state = initialState, action) {
   switch (action.type) {
@@ -10,7 +10,7 @@ export default function fetchReducer (state = initialState, action) {
     }
 
     case types.FETCH_FULFILLED: {
-      return { current: action.payload }
+      return { [action.meta.key]: action.payload }
     }
 
     default: {

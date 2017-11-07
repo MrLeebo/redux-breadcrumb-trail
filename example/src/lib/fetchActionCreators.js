@@ -13,7 +13,7 @@ const locations = [
   { id: 3, name: 'Austin, TX' }
 ]
 
-function fetchData (fn) {
+function fetchData (key, fn) {
   return dispatch => {
     return (...args) => {
       dispatch({ type: types.FETCH_PENDING })
@@ -21,17 +21,18 @@ function fetchData (fn) {
       setTimeout(() => {
         dispatch({
           type: types.FETCH_FULFILLED,
-          payload: fn(...args)
+          payload: fn(...args),
+          meta: { key }
         })
       }, 500)
     }
   }
 }
 
-export const fetchProduct = fetchData(({id}) => products[id - 1])
-export const fetchProducts = fetchData(() => products)
-export const fetchLocation = fetchData(({id}) => locations[id - 1])
-export const fetchLocations = fetchData(() => locations)
+export const fetchProduct = fetchData('product', ({id}) => products[id - 1])
+export const fetchProducts = fetchData('products', () => products)
+export const fetchLocation = fetchData('place', ({id}) => locations[id - 1])
+export const fetchLocations = fetchData('places', () => locations)
 
 export function reset () {
   return { type: types.RESET }
