@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router'
+import { connect } from 'react-redux'
 
-import fetched from './fetched'
 import { fetchProduct, reset } from '../lib/fetchActionCreators'
 
 export class Product extends Component {
@@ -22,10 +22,10 @@ export class Product extends Component {
   }
 
   render () {
-    const {children, fetch, params} = this.props
-    if (!fetch.current) return <div>Loading...</div>
+    const {children, product, params} = this.props
+    if (!product) return <div>Loading...</div>
 
-    const { name, price, description } = fetch.current
+    const { name, price, description } = product
     return (
       <div>
         <div className='text-center'>
@@ -57,4 +57,5 @@ export class Product extends Component {
   }
 }
 
-export default fetched(Product)
+export const mapProps = ({fetch}) => ({ product: fetch.product })
+export default connect(mapProps)(Product)

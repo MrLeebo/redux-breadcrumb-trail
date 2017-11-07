@@ -1,10 +1,11 @@
 import React from 'react'
-import fetched from './fetched'
-import breadcrumbify from '../../../dist/breadcrumbify'
+import { breadcrumbify } from 'redux-breadcrumb-trail'
+import { connect } from 'react-redux'
+import { mapProps } from './Location'
 
-export function LocationBreadcrumb ({fetch}) {
-  if (!fetch.current) return <div><i className='fa fa-refresh fa-spin' /></div>
-  return <i>{fetch.current.name}</i>
+export function LocationBreadcrumb ({place}) {
+  if (!place) return <div><i className='fa fa-refresh fa-spin' /></div>
+  return <i>{place.name}</i>
 }
 
-export default fetched(breadcrumbify(LocationBreadcrumb))
+export default connect(mapProps)(breadcrumbify(LocationBreadcrumb))

@@ -5,15 +5,16 @@
   "private": true,
   "devDependencies": {
     "gh-pages": "^0.12.0",
-    "react-scripts": "0.9.5",
+    "react-scripts": "1.0.17",
     "redux-logger": "^3.0.6"
   },
   "dependencies": {
-    "react": "^15.4.2",
-    "react-dom": "^15.4.2",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
     "react-redux": "^5.0.3",
-    "react-router": "^3.0.2",
-    "redux": "^3.6.0"
+    "react-router": "^3.2.0",
+    "redux": "^3.6.0",
+    "redux-breadcrumb-trail": "^0.5.0"
   },
   "scripts": {
     "start": "react-scripts start",

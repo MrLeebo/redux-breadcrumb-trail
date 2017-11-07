@@ -1,7 +1,7 @@
 import React from 'react'
 import { Router, Route, IndexRoute, IndexRedirect, hashHistory } from 'react-router'
 
-import { componentCache } from '../../../dist'
+import { componentCache } from 'redux-breadcrumb-trail'
 
 import App from './App'
 import Home from './Home'
